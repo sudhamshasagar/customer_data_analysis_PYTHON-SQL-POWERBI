@@ -23,33 +23,13 @@ The project demonstrates proficiency in data cleaning, advanced database queryin
 #### 1. Top Products Ranking using RANK() (Q3)
 Used the RANK() window function to accurately rank products by their average review rating, addressing a business need for inventory focus.
 
-WITH product_ranks AS (
-    SELECT 
-        item_purchased,
-        ROUND(AVG(review_rating), 2) AS avg_rating,
-        RANK() OVER (ORDER BY AVG(review_rating) DESC) AS rating_rank
-    FROM customer_data
-    GROUP BY item_purchased
-)
-SELECT *
-FROM product_ranks
-WHERE rating_rank <= 5;
+<img width="877" height="326" alt="image" src="https://github.com/user-attachments/assets/5a4f2820-e30b-4467-86f5-128446874ebf" />
+
 
 #### 2. Customer Segmentation using CASE Statements (Q7)
 Implemented core business logic using a CASE statement within a CTE to assign each customer to one of three categories based on their previous_purchases.
 
-with customer_type as (
-	SELECT customer_id, previous_purchases,
-	CASE 
-		WHEN previous_purchases = 1 THEN 'New'
-		WHEN previous_purchases BETWEEN 2 AND 10 THEN 'Returning'
-		ELSE 'Loyal'
-		END AS customer_segment
-	FROM customer_data)
-  
-  select customer_segment,count(*) AS "Number of Customers" 
-	from customer_type 
-	group by customer_segment;
+<img width="881" height="347" alt="image" src="https://github.com/user-attachments/assets/66c005f8-9b7f-40c0-b348-ce358442ff31" />
 
 
 ### 🚀 Future Enhancements
