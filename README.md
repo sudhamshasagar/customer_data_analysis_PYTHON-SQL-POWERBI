@@ -37,3 +37,7 @@ Implemented core business logic using a CASE statement within a CTE to assign ea
 - Predictive Modeling: Use the segmented and aggregated data to build a churn prediction model using Python (Scikit-learn).
 - Recency-Frequency-Monetary (RFM) Analysis: Implement a full RFM score calculation in SQL to provide a more granular, numerical segmentation of customer value.
 - Time-Series Analysis: Incorporate date data (if available) to analyze sales trends and seasonality for more accurate forecasting.
+
+
+
+<img width="1264" height="715" alt="image" src="https://github.com/user-attachments/assets/bd30e192-fe0a-489e-9dc4-5f54889d0c2f" />
